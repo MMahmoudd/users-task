@@ -29,7 +29,7 @@
           {{ item.selectable.email }}
       </div>
     </template>
-    <template v-slot:[`item.city`]="{ item }">
+    <template v-slot:[`item.address.city`]="{ item }">
       <div class="align-center v-data-table__tr--clickable" @click="handleClick(item.selectable)">
           {{ item.selectable.address.city }}
       </div>
@@ -66,7 +66,7 @@ export default {
             title: 'Name',
           },
           { align: 'center', key: 'email', title: 'Email' },
-          { align: 'center', key: 'city', title: 'City' },
+          { align: 'center', key: 'address.city', title: 'City' },
         ],
       }
     },

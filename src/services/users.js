@@ -12,12 +12,4 @@ const resource = `${API_URL}/users`;
       }
     });
   },
-  getProductData(id) {
-    return Service.get(`${resource}/products/${id}`)
-	.then((response) => {
-      if (response.status === 200) {
-        return response.data;
-      }
-    });
-  },
 }
